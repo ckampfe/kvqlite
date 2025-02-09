@@ -1,5 +1,7 @@
 # kvqlite
 
+[![Rust](https://github.com/ckampfe/kvqlite/actions/workflows/rust.yml/badge.svg)](https://github.com/ckampfe/kvqlite/actions/workflows/rust.yml)
+
 key/value db backed by sqlite, with two storage strategies: update-in-place, and append.
 
 ## update in place
