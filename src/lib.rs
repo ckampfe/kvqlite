@@ -11,9 +11,9 @@ mod storage;
 
 #[derive(Debug, Error)]
 pub enum Error {
-    #[error("error with sqlite")]
+    #[error("error with r2d2 connection pool")]
     R2d2Error(#[from] r2d2::Error),
-    #[error("ldfkj")]
+    #[error("error with sqlite")]
     SqliteError(#[from] r2d2_sqlite::rusqlite::Error),
     #[error("could not serialize")]
     Serialization(#[from] ciborium::ser::Error<std::io::Error>),
