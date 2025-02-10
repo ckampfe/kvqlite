@@ -115,7 +115,6 @@ impl Storage for UpdateInPlace {
         Ok(())
     }
 
-    /// the distinct number of keys in the system
     fn keys_count(&self) -> Result<i64, Error> {
         let conn = self.pool.get()?;
 
@@ -130,7 +129,6 @@ impl Storage for UpdateInPlace {
         Ok(entries_count)
     }
 
-    /// all distinct keys in the system
     fn keys(&self) -> Result<Vec<Vec<u8>>, Error> {
         let conn = self.pool.get()?;
 
